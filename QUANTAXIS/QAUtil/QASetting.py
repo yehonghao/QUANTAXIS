@@ -2,7 +2,7 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (c) 2016-2018 yutiansut/QUANTAXIS
+# Copyright (c) 2016-2019 yutiansut/QUANTAXIS
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -68,7 +68,7 @@ class QA_Setting():
         else:
             config = configparser.ConfigParser()
             config.add_section('MONGODB')
-            config.set('MONGODB', 'uri', 'mongodb://localhost:27017')
+            config.set('MONGODB', 'uri', DEFAULT_DB_URI)
             f = open('{}{}{}'.format(setting_path, os.sep, 'config.ini'), 'w')
             config.write(f)
             res = DEFAULT_DB_URI
